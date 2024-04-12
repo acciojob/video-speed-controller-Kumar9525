@@ -6,6 +6,13 @@ const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
 const ranges = player.querySelectorAll('.player__slider');
 
+const rewindButton = player.querySelector('.rewind');
+
+rewindButton.addEventListener('click', () => {
+  video.currentTime -= 10;
+});
+
+
 function togglePlay() {
   const method = video.paused ? 'play' : 'pause';
   video[method]();
